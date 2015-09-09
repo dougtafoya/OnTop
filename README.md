@@ -5,7 +5,5 @@ This is a debug build with simple build script included. Just run build.bat to c
 
 
 SHIFT+CLICK to set a window always on top
-
 CTRL+CLICK to remove on top status
-
 F12 to quit
