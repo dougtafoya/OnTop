@@ -15,7 +15,7 @@ int main(int argc, char* argv[], char* envp[])
 
 	   	if(GetAsyncKeyState(VK_LBUTTON))
 	   	{
-	   		if(GetAsyncKeyState(VK_SHIFT))
+	   		if(GetAsyncKeyState(VK_SHIFT) & (1<<15))
 		    {
 			    HWND onTopWindow;
 			    POINT pt;
@@ -59,7 +59,7 @@ int main(int argc, char* argv[], char* envp[])
 			        }
 	     		}
 	    	}
-	    	else if(GetAsyncKeyState(VK_CONTROL))
+	    	else if(GetAsyncKeyState(VK_CONTROL) & (1<<15))
 	    	{
 	    		HWND onTopWindow;
 			    POINT pt;
