@@ -4,7 +4,7 @@
 int main(int argc, char* argv[], char* envp[])
 {	
 
-	printf("SHIFT+CLICK to set a window always on top\nCTRL+CLICK to remove on top status\nF12 to quit\n");
+	printf("SHIFT+CLICK to set a window alwasys on top\nCTRL+CLICK to remove on top status\nF12 to cancel\n");
 
 	while(1)
   	{
@@ -15,7 +15,11 @@ int main(int argc, char* argv[], char* envp[])
 
 	   	if(GetAsyncKeyState(VK_LBUTTON))
 	   	{
-	   		if(GetAsyncKeyState(VK_SHIFT) & (1<<15))
+
+	   		 //needs to be checking if most significant bit is set, if((GetAsyncKeyState(VK_LBUTTON)) & (1<<(15)))?
+			//check in watch window to see what position we should really be checking
+			
+			if(GetAsyncKeyState(VK_SHIFT) & (1<<15))
 		    {
 			    HWND onTopWindow;
 			    POINT pt;
@@ -103,7 +107,7 @@ int main(int argc, char* argv[], char* envp[])
 			        }
 	     		}
 	    	}
-	   	}
+	   }
 	   	Sleep(100);
 	}
 }
